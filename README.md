@@ -2,4 +2,4 @@
 
 ## Nextjs'i keşfetmek ve ilk kez kullanmak için denediğim bir projedir.
 
-### responsive hale getirilip, kodlama düzenlenecektir.
+### Önce tasarım düzenlenecek daha sonra responsive hale getirilip, kodlama düzenlenecektir.
