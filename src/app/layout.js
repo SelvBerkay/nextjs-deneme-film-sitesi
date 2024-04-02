@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
 import "./global.css"
 import { Poppins } from 'next/font/google'
 
@@ -14,7 +13,6 @@ const Layout = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
       <body className={poppins.className}>
-        <Navbar />
         {children}
       </body>
     </html>
