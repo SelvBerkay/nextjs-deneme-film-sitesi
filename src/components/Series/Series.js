@@ -26,9 +26,9 @@ const Series = ({ dt }) => {
   }
   const ITEM_WIDTH = 600
   return (
-    <div className='w-screen h-screen relative overflow-hidden'>
+    <div className='w-screen h-screen relative overflow-hidden bg-no-repeat'>
       <SelectedSeries selectedSeries={selectedSeries} />
-      <div className='absolute bottom-[16.5rem] left-14 flex gap-5'>
+      <div className='absolute bottom-[18rem] left-14 flex gap-5'>
         <button className='rounded-full p-3 bg-black hover:bg-opacity-50 transition-opacity' onClick={() => { handleScroll(-ITEM_WIDTH) }}><FaArrowLeft size={25} color='white' /></button>
         <button className='rounded-full p-3 bg-black hover:bg-opacity-50 transition-opacity' onClick={() => { handleScroll(ITEM_WIDTH) }}><FaArrowRight size={25} color='white' /></button>
       </div>
