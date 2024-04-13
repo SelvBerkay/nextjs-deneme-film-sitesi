@@ -11,8 +11,8 @@ const Options = ({ data }) => {
   return (
     <>
       {
-        data?.map(item => <div key={item.id} className='relative min-w-[120px] min-h-[120px] cursor-pointer rounded border-4 border-blue-950' onClick={() => handleClick(item.id)}>
-          <Image fill src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}/>
+        data?.map(item => <div key={item.id} className='relative min-w-[120px] min-h-[120px] cursor-pointer' onClick={() => handleClick(item.id)}>
+          <Image fill className='rounded' src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}/>
         </div>)
       }
     </>

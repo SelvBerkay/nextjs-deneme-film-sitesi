@@ -16,7 +16,7 @@ const page = async ({ params, searchParams }) => {
   const {results} = await getData(type, genre)
   return (
     <>
-      <div className='bg-black w-full h-full flex flex-col items-center justify-center text-white p-4'>
+      <div className='bg-blue-900 w-full h-full flex flex-col items-center justify-center text-white p-4'>
         <div className='text-center p-4 text-2xl font-bold'>{type.toUpperCase()} - {genre.toUpperCase()}</div>
         <div className="overflow-x-auto max-w-[100%] flex flex-1 items-center gap-5 p-4">
           <Options data={results} />
