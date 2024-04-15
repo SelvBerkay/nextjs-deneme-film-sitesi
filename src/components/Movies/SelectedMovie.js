@@ -1,17 +1,24 @@
 "use client"
 import React from 'react'
 import Image from "next/image"
+import { FaImdb, FaClock  } from "react-icons/fa";
 const SelectedMovie = ({ item }) => {
-  const { title, overview, release_date, tagline, vote_average, vote_count, runtime, genres, backdrop_path } = item
+  const { title, overview, tagline, vote_average, vote_count, runtime, genres, backdrop_path } = item
+  function toHoursAndMinutes(totalMinutes) {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return `${hours}H ${minutes}M`;
+  }
   return (
-    <div className='w-[80%] rounded bg-blue-950 flex flex-col lg:flex-row justify-between p-4 items-center'>
-      <div className='w-[50%] flex flex-col gap-2'>
+    <div className='w-[100%] rounded bg-blue-950 flex flex-col lg:flex-row  p-4 items-center'>
+      <div className='w-[80%] lg:w-[60%] flex flex-col gap-2'>
         <div className='flex gap-2 text-purple-800'>
           {
-            genres.map(genre => <p>{genre.name}</p>)
+            genres.map((genre, i) => <p key={i} className='text-sm font-bold'>{genre.name}</p>)
           }
         </div>
         <div className='text-2xl font-bold'>{title}</div>
+        <div className='text-sm text-slate-500 flex items-center gap-2'>{toHoursAndMinutes(runtime)} <FaClock size={12} /> <FaImdb size={24} color='orange' /> <span className='text-amber-500'>{vote_average.toFixed(1)} ({vote_count})</span> </div>
         <div className='text-md text-slate-500'>{tagline}</div>
         <div className='text-l text-blue-400'>{overview}</div>
         <div className='flex gap-4'>

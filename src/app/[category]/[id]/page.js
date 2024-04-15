@@ -12,7 +12,7 @@ const page = async ({ params }) => {
   const type = params.category === "movies" ? "movie" : "tv"
   const data = await getDetail(params.id, type)
   return (
-    <div className='w-full h-full bg-blue-900 text-white flex items-center justify-center p-4'>
+    <div className='w-full bg-blue-900 text-white flex items-center justify-center p-4' style={{ height: "calc(100vh - 67.97px)" }}>
       {
         type === "movie" ? <SelectedMovie item={data}/> : <SelectedSeries item={data}/>
       }
