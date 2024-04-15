@@ -18,8 +18,7 @@ const Options = ({ data }) => {
     <>
 
       <div ref={ref} id='slider' className="overflow-x-scroll max-w-[100%] flex flex-1 items-center gap-5 p-4 scroll-smooth scrollbar-none">
-          <FaArrowAltCircleLeft size={40} color='white' className='cursor-pointer absolute start-0 z-10' onClick={() => slide(-500)} />
-          
+          <FaArrowAltCircleLeft size={40} color='white' className='cursor-pointer absolute start-0 z-10' onClick={() => slide(-500)} /> 
         {
           data?.map(item =>
             <div key={item.id}
