@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className='w-screen flex justify-between items-center p-3 bg-blue-950'>
       <div className='text-xl font-bold bg-blue-400 rounded p-2'>watchHere<span className='text-sm'>.com</span></div>
-      <div className='flex relative sm:hidden'>
+      <div className='flex relative sm:hidden cursor-pointer'>
         <GiHamburgerMenu size={30} color='white' onClick={() => setOpenMenu(!openMenu)} />
         <div className={`${openMenu ? "flex" : "hidden"} absolute top-10 end-4 flex-col gap-2 bg-blue-950 p-4 z-30`}>
           <Link href="/" className={linkClass} onClick={() => setOpenMenu(!openMenu)}>Home</Link>
