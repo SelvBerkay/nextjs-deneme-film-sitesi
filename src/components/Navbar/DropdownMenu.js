@@ -54,7 +54,7 @@ const DropdownMenu = ({ categoryName, linkStyle }) => {
             {
               hoverList.map((item, i) =>
                 <li key={i}>
-                  <Link href={item.url} onClick={() => setHidden(!hidden)} className="block px-4 py-2 text-white hover:bg-gray-600">{item.name}</Link>
+                  <Link href={item.url} onClick={() => setHidden(!hidden)} className="block px-4 py-2 text-white hover:bg-gray-600 transition-colors">{item.name}</Link>
                 </li>
               )
             }
