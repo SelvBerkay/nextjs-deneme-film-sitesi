@@ -2,7 +2,6 @@ import React from 'react'
 import "./global.css"
 import { Poppins } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
-import Providers from './providers'
 const poppins = Poppins({ subsets: ['latin'], weight: "300" })
 
 const Layout = ({ children }) => {
@@ -10,14 +9,12 @@ const Layout = ({ children }) => {
     <html>
       <head>
         <title>Next Movie</title>
-        <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
-      <body className={`${poppins.className} overflow-hidden`}>
-        <Providers>
+      <body className={`${poppins.className} overflow-x-hidden`}>
           <Navbar />
           {children}
-        </Providers>
       </body>
     </html>
   )
