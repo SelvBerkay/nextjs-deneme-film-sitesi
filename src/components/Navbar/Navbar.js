@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className='text-xl font-bold bg-blue-400 rounded p-2'>watchHere<span className='text-sm'>.com</span></div>
       <div className='flex relative sm:hidden'>
         <GiHamburgerMenu size={30} color='white' onClick={() => setOpenMenu(!openMenu)} />
-        <div className={`${openMenu ? "flex" : "hidden"} absolute top-10 end-4 flex-col gap-2 bg-blue-950 p-4 z-20`}>
+        <div className={`${openMenu ? "flex" : "hidden"} absolute top-10 end-4 flex-col gap-2 bg-blue-950 p-4 z-30`}>
           <Link href="/" className={linkClass} onClick={() => setOpenMenu(!openMenu)}>Home</Link>
           <Link href="/movies" className={linkClass} onClick={() => setOpenMenu(!openMenu)}>Movies</Link>
           <Link href="/series" className={linkClass} onClick={() => setOpenMenu(!openMenu)}>Series</Link>
