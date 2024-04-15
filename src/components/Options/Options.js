@@ -18,7 +18,7 @@ const Options = ({ data }) => {
     <>
 
       <div ref={ref} id='slider' className="overflow-x-scroll max-w-[100%] flex flex-1 items-center gap-5 p-4 scroll-smooth scrollbar-none">
-          <FaArrowAltCircleLeft size={40} color='white' className='cursor-pointer absolute start-0 z-10' onClick={() => slide(-500)} /> 
+          <FaArrowAltCircleLeft size={40} color='white' className='cursor-pointer absolute start-0 z-20' onClick={() => slide(-500)} /> 
         {
           data?.map(item =>
             <div key={item.id}
@@ -28,7 +28,7 @@ const Options = ({ data }) => {
               <Image sizes='100%' fill className='rounded-lg' src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt='image' />
             </div>)
         }
-        <FaArrowAltCircleRight size={40} color='white' className='cursor-pointer absolute end-0 z-10' onClick={() => slide(500)} />
+        <FaArrowAltCircleRight size={40} color='white' className='cursor-pointer absolute end-0 z-20' onClick={() => slide(500)} />
       </div>
     </>
   )

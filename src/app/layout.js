@@ -12,9 +12,11 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
-      <body className={`${poppins.className} overflow-x-hidden`}>
+      <body className={`${poppins.className}`}>
+        <div className='w-screen h-screen overflow-hidden'>
           <Navbar />
           {children}
+        </div>
       </body>
     </html>
   )
